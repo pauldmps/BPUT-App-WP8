@@ -23,7 +23,6 @@ namespace BPUT_App
 
         public ObservableCollection<Notice> notices;
         String jsondata, url;
-        List<Notice> notice;
         
 
         public MainPage()
@@ -31,15 +30,7 @@ namespace BPUT_App
            
             InitializeComponent();
             this.Loaded += new RoutedEventHandler(mainpage_loaded);
-            notices = new ObservableCollection<Notice>();
-
-            /*
-            var uri = new Uri("http://pauldmps.url.ph/json.php");
-            HttpWebRequest request = (HttpWebRequest)HttpWebRequest.Create(uri);
-            request.ContentType = "application/json";
-            request.Accept = "application/json";
-            request.BeginGetResponse(new AsyncCallback(getJsonData),request); */
-            
+            notices = new ObservableCollection<Notice>();            
         }
 
 
@@ -71,30 +62,18 @@ namespace BPUT_App
           }
           noticelist.ItemsSource = notices;
        }   
-        /*
-        public void getJsonData(IAsyncResult result)
-        {
-            HttpWebRequest request = result.AsyncState as HttpWebRequest;
-             
-                try
-                   {
-                     WebResponse response =  request.EndGetResponse(result);
-                     jsondata = new StreamReader(response.GetResponseStream()).ReadToEnd();
-                     Dispatcher.BeginInvoke(() => textblock1.Text = jsondata);
-                }
-                catch (Exception){
-                }    
-              }   */
        
-
-        private void LongListSelector_SelectionChanged(object sender, SelectionChangedEventArgs e){}
-
         private async Task downloadData(string url)
         {
             HttpClient client = new HttpClient();
             jsondata = await client.GetStringAsync(url);
-         //   progressbar_main.Visibility = System.Windows.Visibility.Collapsed;
          }
+
+        private void Button_Click(object sender, RoutedEventArgs e)
+        {
+            NavigationService.Navigate(new Uri("/PdfActivity.xaml",UriKind.Relative));
+
+        }
 
 
             

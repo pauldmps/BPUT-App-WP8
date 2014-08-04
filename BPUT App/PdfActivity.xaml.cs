@@ -7,6 +7,7 @@ using System.Windows.Controls;
 using System.Windows.Navigation;
 using Microsoft.Phone.Controls;
 using Microsoft.Phone.Shell;
+using System.Diagnostics;
 
 namespace BPUT_App
 {
@@ -15,6 +16,16 @@ namespace BPUT_App
         public PdfActivity()
         {
             InitializeComponent();
+            this.Loaded += new RoutedEventHandler(pdfactivity_loaded);
+        
         }
+
+        private void pdfactivity_loaded(object sender, RoutedEventArgs e)
+        {
+            Uri path = new Uri(@"ms-appx:///Assets/Pdfjs/index.html", UriKind.Absolute);
+            webview.IsScriptEnabled = true;
+            webview.Navigate(path);
+        }
+
     }
 }

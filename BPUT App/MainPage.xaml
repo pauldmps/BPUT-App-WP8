@@ -13,17 +13,17 @@
     Foreground="{StaticResource PhoneForegroundBrush}"
     SupportedOrientations="Portrait" Orientation="Portrait"
     shell:SystemTray.IsVisible="True" >
-	<phone:PhoneApplicationPage.Resources>
-    <DataTemplate x:Key="NoticeTemplate">
-			<StackPanel Orientation="Vertical" Margin="12,0,0,24">
+    <phone:PhoneApplicationPage.Resources>
+        <DataTemplate x:Key="NoticeTemplate">
+            <StackPanel Orientation="Vertical" Margin="12,0,0,24">
                 <TextBlock Text="{Binding text}" 
                                TextWrapping="Wrap" 
                                FontSize="{StaticResource PhoneFontSizeNormal}" 
                                VerticalAlignment="Center" 
                                HorizontalAlignment="Center"/>
             </StackPanel>
-		</DataTemplate>
-	</phone:PhoneApplicationPage.Resources>
+        </DataTemplate>
+    </phone:PhoneApplicationPage.Resources>
 
     <phone:PhoneApplicationPage.ApplicationBar>
         <shell:ApplicationBar IsVisible="True" IsMenuEnabled="True">
@@ -57,18 +57,20 @@
 
         <Grid x:Name="ContentPanel" 
              Grid.Row="1" 
-             Margin="12,0,12,0" Grid.ColumnSpan="2">
-            
+             Margin="10,0,14,0" Grid.ColumnSpan="2">
+
             <ListBox Name="noticelist"
                      HorizontalAlignment="Left" 
                      Height="571" 
-                     ItemsSource="{Binding notice}" 
                      Margin="10,10,0,-46" 
                      VerticalAlignment="Top"
-                     Width="420"
-                     ItemTemplate="{StaticResource NoticeTemplate}" />
+                     Width="420" >
+
+            </ListBox>
+            <Button Click="Button_Click"
+                Content="Button" HorizontalAlignment="Left" Margin="10,10,0,0" VerticalAlignment="Top"/>
         </Grid>
-        
+
         <ProgressBar x:Name="progressbar_main" 
                      HorizontalAlignment="Left" 
                      Height="10" Margin="12,0,0,0"

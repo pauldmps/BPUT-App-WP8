@@ -1,7 +1,7 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Deployment xmlns="http://schemas.microsoft.com/windowsphone/2012/deployment" AppPlatformVersion="8.0">
   <DefaultLanguage xmlns="" code="en-US" />
-  <App xmlns="" ProductID="{b39e3813-5b0b-4efb-a043-7a6a89ecffcc}" Title="BPUT_App" RuntimeType="Silverlight" Version="1.0.0.0" Genre="apps.normal" Author="BPUT_App author" Description="Sample description" Publisher="BPUT_App" PublisherID="{57131463-e968-4467-8d62-549584ed9dc3}">
+  <App xmlns="" ProductID="{b39e3813-5b0b-4efb-a043-7a6a89ecffcc}" Title="BPUT APP" RuntimeType="Silverlight" Version="1.0.0.0" Genre="apps.normal" Author="Shantanu Paul" Description="This app displays recent notices from the website of Biju Patnaik University of Technology in a mobile friendly format." Publisher="Shantanu Paul" PublisherID="{57131463-e968-4467-8d62-549584ed9dc3}">
     <IconPath IsRelative="true" IsResource="false">Assets\ApplicationIcon.png</IconPath>
     <Capabilities>
       <Capability Name="ID_CAP_MEDIALIB_AUDIO" />
@@ -16,20 +16,20 @@
     <Tokens>
       <PrimaryToken TokenID="BPUT_AppToken" TaskName="_default">
         <TemplateFlip>
-          <SmallImageURI IsRelative="true" IsResource="false">Assets\Tiles\FlipCycleTileSmall.png</SmallImageURI>
+          <SmallImageURI IsRelative="true" IsResource="false">Assets\ApplicationIcon.png</SmallImageURI>
           <Count>0</Count>
-          <BackgroundImageURI IsRelative="true" IsResource="false">Assets\Tiles\FlipCycleTileMedium.png</BackgroundImageURI>
-          <Title>BPUT_App</Title>
+          <BackgroundImageURI IsRelative="true" IsResource="false">Assets\ApplicationIcon.png</BackgroundImageURI>
+          <Title>
+          </Title>
           <BackContent>
           </BackContent>
-          <BackBackgroundImageURI>
+          <BackBackgroundImageURI IsRelative="true" IsResource="false">
           </BackBackgroundImageURI>
           <BackTitle>
           </BackTitle>
-          <DeviceLockImageURI>
+          <DeviceLockImageURI IsRelative="true" IsResource="false">
           </DeviceLockImageURI>
-          <HasLarge>
-          </HasLarge>
+          <HasLarge>false</HasLarge>
         </TemplateFlip>
       </PrimaryToken>
     </Tokens>

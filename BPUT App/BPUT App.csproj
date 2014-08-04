@@ -131,7 +131,12 @@
     </Page>
   </ItemGroup>
   <ItemGroup>
-    <None Include="Assets\Pdf.js\data.json" />
+    <None Include="Assets\Pdfjs\data.json">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="Assets\Pdfjs\test.pdf">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
     <None Include="packages.config" />
     <None Include="Properties\AppManifest.xml" />
     <None Include="Properties\WMAppManifest.xml">
@@ -146,13 +151,27 @@
     <Content Include="Assets\ApplicationIcon.png">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
-    <Content Include="Assets\Pdf.js\compatibility.js" />
-    <Content Include="Assets\Pdf.js\customview.js" />
-    <Content Include="Assets\Pdf.js\index.html" />
-    <Content Include="Assets\Pdf.js\minimal.css" />
-    <Content Include="Assets\Pdf.js\pdf.js" />
-    <Content Include="Assets\Pdf.js\pdf.worker.js" />
-    <Content Include="Assets\Pdf.js\pdffile.js" />
+    <Content Include="Assets\Pdfjs\compatibility.js">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Assets\Pdfjs\customview.js">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Assets\Pdfjs\index.html">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Assets\Pdfjs\minimal.css">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Assets\Pdfjs\pdf.js">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Assets\Pdfjs\pdf.worker.js">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Assets\Pdfjs\pdffile.js">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
     <Content Include="Assets\Tiles\FlipCycleTileLarge.png">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
