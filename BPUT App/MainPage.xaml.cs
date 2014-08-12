@@ -52,6 +52,8 @@ namespace BPUT_App
                   Notice notice1 = notice;
                   notices.Add(notice1);
               }
+
+              noticelist.ItemsSource = notices;
           }
           catch (Exception exp)
           {
@@ -60,8 +62,8 @@ namespace BPUT_App
           finally
           {
               progressbar_main.Visibility = System.Windows.Visibility.Collapsed;
-              noticelist.ItemsSource = notices;
           }
+
        }   
        
         private async Task downloadData(string url)
