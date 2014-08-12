@@ -64,11 +64,10 @@
                      Height="571" 
                      Margin="10,10,0,-46" 
                      VerticalAlignment="Top"
-                     Width="420" >
-
+                     Width="420"
+                     ItemTemplate="{StaticResource NoticeTemplate}"
+                     SelectionChanged="noticelist_SelectionChanged">
             </ListBox>
-            <Button Click="Button_Click"
-                Content="Button" HorizontalAlignment="Left" Margin="10,10,0,0" VerticalAlignment="Top"/>
         </Grid>
 
         <ProgressBar x:Name="progressbar_main" 

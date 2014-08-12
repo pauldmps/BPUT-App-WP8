@@ -15,6 +15,7 @@ using System.Threading.Tasks;
 using System.Net.Http;
 using System.Text;
 using System.Runtime.Serialization.Json;
+using System.Diagnostics;
 
 namespace BPUT_App
 {
@@ -54,13 +55,13 @@ namespace BPUT_App
           }
           catch (Exception exp)
           {
-              Dispatcher.BeginInvoke(() => MessageBox.Show(exp.StackTrace));
+              Debug.WriteLine(exp.StackTrace);
           }
           finally
           {
               progressbar_main.Visibility = System.Windows.Visibility.Collapsed;
+              noticelist.ItemsSource = notices;
           }
-          noticelist.ItemsSource = notices;
        }   
        
         private async Task downloadData(string url)
@@ -69,15 +70,23 @@ namespace BPUT_App
             jsondata = await client.GetStringAsync(url);
          }
 
-        private void Button_Click(object sender, RoutedEventArgs e)
+        private void noticelist_SelectionChanged(object sender, SelectionChangedEventArgs e)
         {
-            NavigationService.Navigate(new Uri("/PdfActivity.xaml",UriKind.Relative));
 
+            if (noticelist.SelectedItem.Equals(-1))
+            { return; }
+
+            NavigationService.Navigate(new Uri("/NoticeActivity.xaml", UriKind.Relative));
+
+            //noticelist.SelectedItem = -1;
         }
 
 
-            
-        
+
+        protected override void OnNavigatedTo(NavigationEventArgs e)
+        {
+            mainpage_loaded(this,new RoutedEventArgs());
+        }
         
         
 
