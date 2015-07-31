@@ -37,7 +37,7 @@ namespace BPUT_App
 
        private async void mainpage_loaded(object sender, RoutedEventArgs e)
        {
-          url = "http://pauldmps.url.ph/json.php";
+          url = "http://paul-shantanu-bputapp.appspot.com/json.php";
           await downloadData(url);
 
           try
